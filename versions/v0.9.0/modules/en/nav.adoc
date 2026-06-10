@@ -1,0 +1,15 @@
+* xref:introduction.adoc[Overview]
+* xref:quickstart.adoc[Quick Start]
+* Tutorials
+** User guide
+*** xref:user-guide/airgap-support.adoc[Air Gap Support]
+*** xref:user-guide/private-registries.adoc[Private Registries]
+*** xref:user-guide/querying-reports.adoc[Querying Reports]
+*** xref:user-guide/scanning-registries.adoc[Scanning Registries]
+*** xref:user-guide/vex.adoc[VEX Support]
+* Explanations
+* Howtos
+** xref:installation/uninstall.adoc[Uninstall]
+** xref:installation/helm-values.adoc[Helm Values]
+** xref:troubleshooting/collecting-logs.adoc[Collecting Logs]
+* Reference
