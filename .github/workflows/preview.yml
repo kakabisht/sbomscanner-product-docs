@@ -1,0 +1,74 @@
+name: SBOM Scanner product documentation preview - publish to GitHub Pages with Lunr Search Extension
+
+on:
+  # Runs whenever changes are pushed to the main branch.
+  push:
+    branches:
+      - main
+
+  # Allows manual execution from the GitHub Actions tab.
+  workflow_dispatch:
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Install Antora and Lunr search extension
+        run: make environment
+
+      - name: Build SBOM Scanner documentation site
+        run: make product-remote 
+
+      - name: Upload GitHub Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: build/site
+
+      - name: Publish static site to gh-pages branch
+        run: |
+          git config --global user.name "${{ github.actor }}"
+          git config --global user.email "${{ github.actor }}@users.noreply.github.com"
+
+          mv build/site ../site-temp
+
+          git checkout --orphan gh-pages
+          git rm -rf .
+
+          rm -rf node_modules tmp
+
+          mv ../site-temp/* .
+
+          git add .
+          git commit -m "Deploy documentation site"
+          git push --force origin gh-pages
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
