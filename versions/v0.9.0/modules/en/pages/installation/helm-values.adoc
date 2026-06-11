@@ -1,9 +1,9 @@
-= Helm Values Configuration
-:revdate: 2026-06-10
-:page-revdate: {revdate}
-:page-aliases: /enableexperimental
+include::partial$variables.adoc[]
 
-This document describes the available configuration options for the {product_name} Helm chart.
+= Helm Values Configuration
+
+This document describes the available configuration options for the
+{sboms-name} Helm chart.
 
 You can customize these values in two ways:
 
@@ -30,7 +30,7 @@ documentation].
 
 == Log Levels
 
-You can configure the log level for each {product_name} component to
+You can configure the log level for each {sboms-short-name} component to
 control the verbosity of the logs.
 
 [source,yaml]
@@ -103,13 +103,13 @@ documentation on resource requests and limits].
 
 == PostgreSQL Configuration
 
-{product_name} requires a PostgreSQL database to store SBOM data. You have
+{sboms-short-name} requires a PostgreSQL database to store SBOM data. You have
 two options: use the built-in https://cloudnative-pg.io/[CloudNativePG
 (CNPG) operator] or connect to an external PostgreSQL instance.
 
 === Using CloudNativePG (Default)
 
-By default, {product_name} deploys a PostgreSQL cluster using the
+By default, {sboms-short-name} deploys a PostgreSQL cluster using the
 CloudNativePG operator. This is the easiest way to get started.
 
 [source,yaml]

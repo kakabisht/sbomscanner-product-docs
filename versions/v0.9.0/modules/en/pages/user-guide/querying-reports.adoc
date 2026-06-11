@@ -1,9 +1,8 @@
-= Querying SBOM and VulnerabilityReport Resources
-:revdate: 2026-06-10
-:page-revdate: {revdate}
-:page-aliases: /enableexperimental
+include::partial$variables.adoc[]
 
-In this guide, you’ll learn how to query SBOMscanner resources using
+= Querying SBOM and VulnerabilityReport Resources
+
+In this guide, you’ll learn how to query {sboms-name} resources using
 metadata fields.
 
 We’ll walk through three major steps:
