@@ -1,13 +1,12 @@
-= SBOMscanner Quick Start
-:revdate: 2026-06-10
-:page-revdate: {revdate}
-:page-aliases: /enableexperimental
+include::partial$variables.adoc[]
 
-Welcome to the SBOMscanner Quick Start!
+= {sboms-name} Quick Start
+
+Welcome to the {sboms-short-name} Quick Start!
 
 This guide will walk you through the following steps:
 
-* Deploying the SBOMscanner stack in a Kubernetes cluster
+* Deploying the {sboms-short-name} stack in a Kubernetes cluster
 * Running an automated image scan using a `Registry` custom resource
 
 '''''
@@ -73,9 +72,9 @@ own PostgreSQL instance instead of using CloudNativePG. See
 link:helm-values.md#using-an-external-postgresql-instance[Using an
 External PostgreSQL Instance] for configuration details.
 
-== Deploy SBOMscanner
+== Deploy {sboms-short-name}
 
-Follow these simple steps from your local machine to get SBOMscanner up
+Follow these simple steps from your local machine to get {sboms-short-name} up
 and running:
 
 === Install the Helm chart
@@ -154,7 +153,7 @@ trigger an automated scan.
 === Prepare a `registry.yaml` file
 
 Before running a scan, you need to define a `Registry` custom resource
-for SBOMscanner to fetch images.
+for {sboms-short-name} to fetch images.
 
 [source,yaml]
 ----
@@ -178,7 +177,7 @@ kubectl apply -f registry.yaml
 
 === Prepare a `scan-job.yaml`
 
-The `ScanJob` CR tells SBOMscanner which registry to scan.
+The `ScanJob` CR tells {sboms-short-name} which registry to scan.
 
 [source,yaml]
 ----

@@ -1,15 +1,17 @@
-* xref:introduction.adoc[Overview]
-* xref:quickstart.adoc[Quick Start]
+include::partial$variables.adoc[]
+
+* xref:introduction.adoc[]
+* xref:quickstart.adoc[]
 * Tutorials
 ** User guide
-*** xref:user-guide/airgap-support.adoc[Air Gap Support]
-*** xref:user-guide/private-registries.adoc[Private Registries]
-*** xref:user-guide/querying-reports.adoc[Querying Reports]
-*** xref:user-guide/scanning-registries.adoc[Scanning Registries]
-*** xref:user-guide/vex.adoc[VEX Support]
+*** xref:user-guide/airgap-support.adoc[]
+*** xref:user-guide/private-registries.adoc[]
+*** xref:user-guide/querying-reports.adoc[]
+*** xref:user-guide/scanning-registries.adoc[]
+*** xref:user-guide/vex.adoc[]
 * Explanations
 * Howtos
-** xref:installation/uninstall.adoc[Uninstall]
-** xref:installation/helm-values.adoc[Helm Values]
-** xref:troubleshooting/collecting-logs.adoc[Collecting Logs]
+** xref:installation/uninstall.adoc[]
+** xref:installation/helm-values.adoc[]
+** xref:troubleshooting/collecting-logs.adoc[]
 * Reference

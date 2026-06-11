@@ -1,11 +1,10 @@
+include::partial$variables.adoc[]
+
 = Air Gap Support
-:revdate: 2026-06-10
-:page-revdate: {revdate}
-:page-aliases: /enableexperimental
 
-{product_name} can be used in air-gapped environments.
+{sboms-name} can be used in air-gapped environments.
 
-To run the scans, {product_name} currently needs the following external
+To run the scans, {sboms-short-name} currently needs the following external
 sources:
 
 * Vulnerability Database
@@ -23,7 +22,7 @@ allowing you to host them in your own registry:
 * https://github.com/aquasecurity/trivy-db/pkgs/container/trivy-db[`trivy-db`]
 * https://github.com/aquasecurity/trivy-java-db/pkgs/container/trivy-java-db[`trivy-java-db`]
 
-Once mirrored in your own OCI registry, you can install {product_name} to
+Once mirrored in your own OCI registry, you can install {sboms-short-name} to
 point to them:
 
 [source,shell]
@@ -44,7 +43,7 @@ to the internal registries.
 All you need to do is to setup an HTTP server to provide the needed
 files for VEX.
 
-To configure a VEX Hub in {product_name}, create a `VEXHub` resource with
+To configure a VEX Hub in {sboms-short-name}, create a `VEXHub` resource with
 your local repository URL and apply it:
 
 [source,yaml]

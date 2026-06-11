@@ -1,7 +1,6 @@
+include::partial$variables.adoc[]
+
 = Collecting logs for debugging
-:revdate: 2026-06-10
-:page-revdate: {revdate}
-:page-aliases: /enableexperimental
 
 == Install dependencies
 
@@ -26,7 +25,7 @@ helm upgrade --install sbomscanner kubewarden/sbomscanner \
 
 == Verify installation
 
-Check the version. It should match the latest ++sbomscanner-chart-++
+Check the version. It should match the latest `sbomscanner-chart-++*++`
 version found in the
 https://github.com/kubewarden/sbomscanner/releases[releases] page.
 
@@ -54,7 +53,7 @@ is disclosed.
 
 Using
 https://github.com/kubewarden/sbomscanner/blob/main/hack/sbombscanner-debug.sh[the
-script found in the sbomscanner repository]:
+script found in the {sboms-short-name} repository]:
 
 [source,bash]
 ----
@@ -63,9 +62,9 @@ script found in the sbomscanner repository]:
 
 The script collects the following information:
 
-* Logs from the pods of all {product_name} components (controller, workers,
+* Logs from the pods of all {sboms-short-name} components (controller, workers,
 storage, NATS).
-* Manifest of all {product_name} related resources (Registry, VEXHub,
+* Manifest of all {sboms-short-name} related resources (Registry, VEXHub,
 ScanJob, Image, VulnerabilityReport).
 
 The script prints the names of the manifests being collected at runtime.
