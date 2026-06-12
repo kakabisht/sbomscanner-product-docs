@@ -4,9 +4,10 @@ title: SBOM Scanner
 version: '0.9.0'
 prerelease: -dev
 start_page: en:introduction.adoc
-attributes:
-    sboms-name: SUSE Security Vulnerability Scanner
-    sboms-short-name: Vulnerability Scanner #add it for below navbar
-    build-type: product
+asciidoc:
+  attributes:
+      sboms-name: SUSE Security Vulnerability Scanner
+      sboms-short-name: Vulnerability Scanner #add it for below navbar
+      build-type: product
 nav:
   - modules/en/nav.adoc

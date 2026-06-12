@@ -14,11 +14,11 @@ while IFS= read -r -d '' file; do
     fi
 
     cat >> "$file" <<'EOF'
-
-attributes:
-  sboms-name: SUSE Security Vulnerability Scanner
-  sboms-short-name: Vulnerability Scanner
-  build-type: product
+asciidoc:
+    attributes:
+      sboms-name: SUSE Security Vulnerability Scanner
+      sboms-short-name: Vulnerability Scanner
+      build-type: product
 EOF
 
     echo "Updated: $file"
