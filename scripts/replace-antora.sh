@@ -8,8 +8,11 @@ VERSIONS_DIR="${SCRIPT_DIR}/../versions"
 find "$VERSIONS_DIR" -type f -name "antora.yml" -print0 |
 while IFS= read -r -d '' file; do
 
-    if grep -q '^attributes:' "$file"; then
-        echo "Skipped (attributes already exist): $file"
+    #Update title 
+    sed -i 's/^title:.*/title: Vulnerability Scanner/' "$file"
+    #Update asciidoc attributes
+    if grep -q '^asciidoc:' "$file"; then
+        echo "Skipped (asciidoc already exist): $file"
         continue
     fi
 
