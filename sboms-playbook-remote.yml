@@ -1,7 +1,7 @@
 site:
   title: SUSE Security Vulnerability Scanner
   url: /
-  start_page: 0.11.3@sbom-scanner:en:introduction.adoc
+  start_page: 0.11.3@vulnerability-scanner:en:introduction.adoc
 
 content:
   sources:
