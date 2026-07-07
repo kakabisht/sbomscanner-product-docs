@@ -1,7 +1,7 @@
 include::partial$variables.adoc[]
 
 * xref:introduction.adoc[Overview]
-* xref:installation/quickstart.adoc[Quickstart]
+* xref:quickstart.adoc[Quickstart]
 * Tutorials
 ** User guide
 *** xref:user-guide/scanning-registries.adoc[Scanning Registries]
