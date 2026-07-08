@@ -7,7 +7,7 @@ include::partial$variables.adoc[]
 
 == Install dependencies
 
-Please follow the instructions in the xref:installation/quickstart.adoc#requirements[quickstart guide] to ensure you have the necessary dependencies installed.
+Please follow the instructions in the xref:../quickstart.adoc#_requirments[quickstart guide] to ensure you have the necessary dependencies installed.
 
 The `sbomscanner-debug.sh` script additionally requires:
 
